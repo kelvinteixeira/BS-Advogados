@@ -1,17 +1,18 @@
 import React from "react";
-import { Divider, Grid, IconButton } from "@mui/material";
-import { StyledBox } from "./Header.styles";
+import * as Styled from "./footer.styles";
 import {
-  AiOutlineLinkedin,
-  AiOutlineInstagram,
   AiOutlineFacebook,
+  AiOutlineEnvironment,
+  AiOutlineInstagram,
+  AiOutlineLinkedin,
   AiOutlineMail,
   AiOutlineWhatsApp,
+  AiOutlinePhone,
   AiOutlineTwitter,
 } from "react-icons/ai";
-import * as Styled from "./Header.styles";
+import { Grid, IconButton, Typography } from "@mui/material";
 
-export function Header() {
+export function Footer() {
   function socialMediaLink(value: string) {
     switch (value) {
       case "instagram":
@@ -23,47 +24,56 @@ export function Header() {
       case "linkedin":
         window.open("https://www.instagram.com/bsadvogadoss/", "_blank");
         break;
-      case "whatsapp":
-        window.open("https://api.whatsapp.com/send?phone=5583998453749", "_blank");
-        break;
       case "email":
         window.open("barbosadesousadvogados@gmail.com", "_blank");
+        break;
+      case "whatsapp":
+        window.open(
+          "https://api.whatsapp.com/send?phone=5583998453749",
+          "_blank"
+        );
         break;
       default:
         window.alert("Rede social não existente");
     }
   }
-
   return (
-    <>
-      <StyledBox>
+    <Styled.Footer>
+      <Styled.FooterContent>
         <Grid container alignItems="center" justifyContent="space-around">
-          <Grid item xs={3}>
-            LOGO IMAGE
+          <Grid item xs={2}>
+            <Typography>IMAGE LOGO</Typography>
           </Grid>
 
-          <Grid item xs={1}>
-            <Styled.StyledButton variant="outlined" color="inherit">
-              Home
-            </Styled.StyledButton>
-          </Grid>
-          <Grid item xs={1}>
-            <Styled.StyledButton variant="outlined" color="inherit">
-              Sobre
-            </Styled.StyledButton>
-          </Grid>
-          <Grid item xs={1}>
-            <Styled.StyledButton variant="outlined" color="inherit">
-              Blog
-            </Styled.StyledButton>
-          </Grid>
-          <Grid item xs={3}>
-            <Styled.StyledButton variant="outlined" color="inherit">
-              Contato
-            </Styled.StyledButton>
+          <Grid item xs={2}>
+            <Typography variant="h6">
+              Endereço <AiOutlineEnvironment />{" "}
+            </Typography>
+            <Typography variant="body2">
+              Rua João Machado, 267, Sala 12, Prata - Campina Grande /PB CEP
+              26758400
+            </Typography>
           </Grid>
 
           <Grid item>
+            <Typography variant="h6">
+              Fale Conosco <AiOutlinePhone />
+            </Typography>
+            <Typography variant="body2">
+              (83) 9 9637-3738 - <strong>Dr. João</strong>
+            </Typography>
+            <Typography variant="body2">
+              (83) 9 8733-6830 - <strong>Dra. Amanda</strong>
+            </Typography>
+
+            <Grid item xs={2}>
+              <Typography variant="body2">
+                barbosadesousadvogados@gmail.com
+              </Typography>
+            </Grid>
+          </Grid>
+
+          <Grid item >
             <IconButton
               onClick={() => socialMediaLink("instagram")}
               aria-label="instagram"
@@ -102,8 +112,7 @@ export function Header() {
             </IconButton>
           </Grid>
         </Grid>
-      </StyledBox>
-      <Divider />
-    </>
+      </Styled.FooterContent>
+    </Styled.Footer>
   );
 }

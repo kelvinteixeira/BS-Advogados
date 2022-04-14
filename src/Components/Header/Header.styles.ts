@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 import { Box } from '@mui/material';
 
 export const StyledBox = styled(Box)`
-  margin: 4rem 4rem 0 6rem;
+  margin: 2rem 3rem 0 3rem;
 `;
 
 export const StyledButton = styled(Button)`
