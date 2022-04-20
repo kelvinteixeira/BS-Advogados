@@ -11,6 +11,7 @@ import {
   AiOutlineTwitter,
 } from "react-icons/ai";
 import { Grid, IconButton, Typography } from "@mui/material";
+import Logo from "../../Assets/logo.svg";
 
 export function Footer() {
   function socialMediaLink(value: string) {
@@ -40,9 +41,9 @@ export function Footer() {
   return (
     <Styled.Footer>
       <Styled.FooterContent>
-        <Grid container alignItems="center" justifyContent="space-around">
+        <Grid container alignItems="center" justifyContent="space-evenly">
           <Grid item xs={2}>
-            <Typography>IMAGE LOGO</Typography>
+            <Styled.LogoImg src={Logo} />
           </Grid>
 
           <Grid item xs={2}>
@@ -73,7 +74,7 @@ export function Footer() {
             </Grid>
           </Grid>
 
-          <Grid item >
+          <Grid item>
             <IconButton
               onClick={() => socialMediaLink("instagram")}
               aria-label="instagram"
