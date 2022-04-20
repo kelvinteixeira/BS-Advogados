@@ -1,4 +1,4 @@
-import { Button } from '@mui/material';
+import { Button, IconButton } from '@mui/material';
 import styled from '@emotion/styled'
 import { Box } from '@mui/material';
 
@@ -22,4 +22,23 @@ export const LogoImg = styled.img`
   margin: 0;
   margin-left: 4rem;
   padding: 0;
+`;
+
+export const StyledIconButton = styled(IconButton)`
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  border-radius: 10rem;
+  margin: 1rem;
+  color: #fff;
+  border: #fff solid 1px;
+  background-color: #0C63B280;
+  transition: .5s ease-in-out;
+
+  :hover {
+    border: 1px solid #0C63B2;
+    color: #000;
+  }
+
+  
 `;

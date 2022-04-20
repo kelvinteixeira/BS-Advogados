@@ -1,5 +1,6 @@
 import React from "react";
-import { Grid, IconButton, Typography } from "@mui/material";
+import { Grid, IconButton, Tooltip } from "@mui/material";
+import { animateScroll as scroll } from "react-scroll";
 import {
   AiOutlineLinkedin,
   AiOutlineInstagram,
@@ -7,6 +8,7 @@ import {
   AiOutlineMail,
   AiOutlineWhatsApp,
   AiOutlineTwitter,
+  AiOutlineArrowUp,
 } from "react-icons/ai";
 import * as Styled from "./Header.styles";
 import Logo from "../../Assets/logo.svg";
@@ -37,6 +39,23 @@ export function Header() {
     }
   }
 
+  function scrollTo(direction: string) {
+    switch (direction) {
+      case "top":
+        scroll.scrollTo(0);
+        break;
+      case "about":
+        scroll.scrollTo(130);
+        break;
+      case "whoWeAre":
+        scroll.scrollTo(750);
+        break;
+      case "contact":
+        scroll.scrollTo(1100);
+        break;
+    }
+  }
+
   return (
     <Styled.Container>
       <Grid container alignItems="center" justifyContent="space-evenly">
@@ -46,28 +65,36 @@ export function Header() {
 
         <Grid item xs={4}>
           <Grid container justifyContent="space-around">
-            <Styled.StyledButton variant="outlined">
-              <Typography variant="body1" color="#000">
-                Home
-              </Typography>
+            <Styled.StyledButton
+              variant="outlined"
+              color="inherit"
+              onClick={() => scrollTo("about")}
+            >
+              Sobre
             </Styled.StyledButton>
 
-            <Styled.StyledButton variant="outlined">
-              <Typography variant="body1" color="#000">
-                Quem somos
-              </Typography>
+            <Styled.StyledButton
+              variant="outlined"
+              color="inherit"
+              onClick={() => scrollTo("whoWeAre")}
+            >
+              Quem somos
             </Styled.StyledButton>
 
-            <Styled.StyledButton variant="outlined">
-              <Typography variant="body1" color="#000">
-                Blog
-              </Typography>
+            <Styled.StyledButton
+              variant="outlined"
+              color="inherit"
+              onClick={() => scrollTo("blog")}
+            >
+              Blog
             </Styled.StyledButton>
 
-            <Styled.StyledButton variant="outlined">
-              <Typography variant="body1" color="#000">
-                Contato
-              </Typography>
+            <Styled.StyledButton
+              variant="outlined"
+              color="inherit"
+              onClick={() => scrollTo("contact")}
+            >
+              Contato
             </Styled.StyledButton>
           </Grid>
         </Grid>
@@ -111,6 +138,14 @@ export function Header() {
           </IconButton>
         </Grid>
       </Grid>
+      <Tooltip title="Para o topo">
+        <Styled.StyledIconButton
+          color="inherit"
+          onClick={() => scrollTo("top")}
+        >
+          <AiOutlineArrowUp />
+        </Styled.StyledIconButton>
+      </Tooltip>
     </Styled.Container>
   );
 }

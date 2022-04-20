@@ -3,10 +3,12 @@ import React from "react";
 import DireitoPrevidenciario from "../../Assets/direitoCivil.jpg";
 import DireitoDoTrabalho from "../../Assets/direitoDoTrabalho.jpg";
 import DireitoCivil from "../../Assets/direitoCivil.jpg";
-import { Divider, Grid, Typography } from "@mui/material";
+import { Divider, Grid, Tooltip, Typography } from "@mui/material";
 import * as Styled from "./about.styles";
+import { AiOutlineArrowUp } from "react-icons/ai";
 
 export function About() {
+  
   return (
     <Styled.Container>
       <Typography variant="h4" align="center">
@@ -20,7 +22,7 @@ export function About() {
         </Typography>
       </Styled.BoxContent>
 
-      <Typography variant="h4" align="center"  marginBottom={3}>
+      <Typography variant="h4" align="center" marginBottom={3}>
         Nossa especialização
       </Typography>
 
@@ -65,6 +67,8 @@ export function About() {
           <Divider />
         </Grid>
       </Grid>
+
+      
     </Styled.Container>
   );
 }
