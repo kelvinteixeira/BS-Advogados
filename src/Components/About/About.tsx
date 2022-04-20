@@ -13,12 +13,11 @@ export function About() {
         Sobre a BS Advogados
       </Typography>
       <Styled.BoxContent>
-        <Typography variant="body1" align="center">
+        <Typography variant="button" align="center">
           O escritório BS Advogados é qualificado com experiência em diversas
           áreas do Direito. Buscamos garantir o melhor resultado, com agilidade
           e atendimento de excelência aos nossos clientes.
         </Typography>
-        <Divider />
       </Styled.BoxContent>
 
       <Typography variant="h4" align="center"  marginBottom={3}>
