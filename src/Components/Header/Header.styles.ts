@@ -4,12 +4,13 @@ import { Box } from '@mui/material';
 
 export const Container = styled(Box)`
 background: #0C63B2; 
-background: linear-gradient(to right, #0C63B2, #fff);
+background: linear-gradient(to right, #0C63B2,#d9e9f7);
 height: 6rem;
 `;
 
 export const StyledButton = styled(Button)`
   border: .1rem solid #00000035;
+  color: #fff;
 
   :hover {
     border:  .1rem solid #ffffff90;
@@ -39,6 +40,15 @@ export const StyledIconButton = styled(IconButton)`
     border: 1px solid #0C63B2;
     color: #000;
   }
+`;
 
-  
+export const WhatsappButton = styled(Button)`
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: .5rem;
+`;
+
+export const WhatsAppImage = styled.img`
+  width: 60px;
 `;

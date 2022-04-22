@@ -1,6 +1,8 @@
-import React from "react";
-import { Grid, IconButton, Tooltip } from "@mui/material";
+import React, { useState } from "react";
+import { Alert, Grid, IconButton, Snackbar, Tooltip } from "@mui/material";
+import ErrorOutlineIcon from "@mui/icons-material/ErrorOutline";
 import { animateScroll as scroll } from "react-scroll";
+import WhatappImage from "../../Assets/WhatsApp.svg.webp";
 import {
   AiOutlineLinkedin,
   AiOutlineInstagram,
@@ -14,47 +16,7 @@ import * as Styled from "./Header.styles";
 import Logo from "../../Assets/logo.svg";
 
 export function Header() {
-  function socialMediaLink(value: string) {
-    switch (value) {
-      case "instagram":
-        window.open("https://www.instagram.com/bsadvogadoss/", "_blank");
-        break;
-      case "facebook":
-        window.open("https://www.instagram.com/bsadvogadoss/", "_blank");
-        break;
-      case "linkedin":
-        window.open("https://www.instagram.com/bsadvogadoss/", "_blank");
-        break;
-      case "whatsapp":
-        window.open(
-          "https://api.whatsapp.com/send?phone=5583998453749",
-          "_blank"
-        );
-        break;
-      case "email":
-        window.open("barbosadesousadvogados@gmail.com", "_blank");
-        break;
-      default:
-        window.alert("Rede social não existente");
-    }
-  }
-
-  function scrollTo(direction: string) {
-    switch (direction) {
-      case "top":
-        scroll.scrollTo(0);
-        break;
-      case "about":
-        scroll.scrollTo(130);
-        break;
-      case "whoWeAre":
-        scroll.scrollTo(750);
-        break;
-      case "contact":
-        scroll.scrollTo(1100);
-        break;
-    }
-  }
+  const [showSnackBar, setShowSnackBar] = useState(false);
 
   return (
     <Styled.Container>
@@ -68,7 +30,7 @@ export function Header() {
             <Styled.StyledButton
               variant="outlined"
               color="inherit"
-              onClick={() => scrollTo("about")}
+              onClick={() => scroll.scrollTo(130)}
             >
               Sobre
             </Styled.StyledButton>
@@ -76,7 +38,7 @@ export function Header() {
             <Styled.StyledButton
               variant="outlined"
               color="inherit"
-              onClick={() => scrollTo("whoWeAre")}
+              onClick={() => scroll.scrollTo(650)}
             >
               Quem somos
             </Styled.StyledButton>
@@ -84,68 +46,88 @@ export function Header() {
             <Styled.StyledButton
               variant="outlined"
               color="inherit"
-              onClick={() => scrollTo("blog")}
+              onClick={() => scroll.scrollTo(1250)}
             >
-              Blog
+              Contato
             </Styled.StyledButton>
 
             <Styled.StyledButton
               variant="outlined"
               color="inherit"
-              onClick={() => scrollTo("contact")}
+              onClick={() => setShowSnackBar(true)}
             >
-              Contato
+              Blog
             </Styled.StyledButton>
           </Grid>
         </Grid>
 
         <Grid item>
           <IconButton
-            onClick={() => socialMediaLink("instagram")}
+            href="https://www.instagram.com/bsadvogadoss/"
+            target="_blank"
             aria-label="instagram"
           >
             <AiOutlineInstagram color="#000" />
           </IconButton>
+          <Tooltip title="Em desenvolvimento">
+            <IconButton aria-label="linkedin">
+              <AiOutlineLinkedin color="#000" />
+            </IconButton>
+          </Tooltip>
+
+          <Tooltip title="Em desenvolvimento">
+            <IconButton aria-label="facebook">
+              <AiOutlineFacebook color="#000" />
+            </IconButton>
+          </Tooltip>
+
+          <Tooltip title="Em desenvolvimento">
+            <IconButton aria-label="twitter">
+              <AiOutlineTwitter color="#000" />
+            </IconButton>
+          </Tooltip>
           <IconButton
-            onClick={() => socialMediaLink("linkedin")}
-            aria-label="linkedin"
-          >
-            <AiOutlineLinkedin color="#000" />
-          </IconButton>
-          <IconButton
-            onClick={() => socialMediaLink("facebook")}
-            aria-label="facebook"
-          >
-            <AiOutlineFacebook color="#000" />
-          </IconButton>
-          <IconButton
-            onClick={() => socialMediaLink("email")}
+            onClick={() =>
+              window.open("mailto:barbosadesousadvogados@gmail.com")
+            }
             aria-label="email"
           >
             <AiOutlineMail color="#000" />
-          </IconButton>
-          <IconButton
-            onClick={() => socialMediaLink("whatsapp")}
-            aria-label="whatsapp"
-          >
-            <AiOutlineTwitter color="#000" />
-          </IconButton>
-          <IconButton
-            onClick={() => socialMediaLink("whatsapp")}
-            aria-label="whatsapp"
-          >
-            <AiOutlineWhatsApp color="#000" />
           </IconButton>
         </Grid>
       </Grid>
       <Tooltip title="Para o topo">
         <Styled.StyledIconButton
           color="inherit"
-          onClick={() => scrollTo("top")}
+          onClick={() => scroll.scrollTo(0)}
+          size="large"
         >
           <AiOutlineArrowUp />
         </Styled.StyledIconButton>
       </Tooltip>
+
+      <Tooltip title="Fale conosco">
+        <Styled.WhatsappButton
+          onClick={() =>
+            window.open(
+              "https://api.whatsapp.com/send?phone=5583998453749",
+              "_blank"
+            )
+          }
+        >
+          <Styled.WhatsAppImage src={WhatappImage} alt="whatsapp logo" />
+        </Styled.WhatsappButton>
+      </Tooltip>
+
+      <Snackbar
+        open={showSnackBar}
+        autoHideDuration={5000}
+        onClose={() => setShowSnackBar(false)}
+      >
+        <Alert severity="error" variant="filled">
+          Desculpe o blog se encontra em construção!
+        </Alert>
+      </Snackbar>
     </Styled.Container>
   );
 }
