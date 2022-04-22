@@ -5,5 +5,30 @@
   margin: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif !important;
-  
+}
+
+.message {
+  width: 73.5rem;
+  animation: typing 10s steps(185), blink .8s infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  40% {
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
+@media (max-width: 640px) {
+  .message {
+    max-width: 30rem;
+  }
 }
