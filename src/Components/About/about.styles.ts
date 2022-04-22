@@ -1,12 +1,14 @@
 import styled from "@emotion/styled";
-import { Box, IconButton } from "@mui/material";
+import { Box, Button, IconButton, Typography } from "@mui/material";
 
 export const Container = styled(Box)`
+  display: grid;
+  place-items: center;
   margin-top: 3rem;
 `;
 
 export const BoxContent = styled(Box)`
-  width: 35rem;
+  margin-left: 30px;
   margin: 0 auto;
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -28,3 +30,4 @@ export const StyledIconButton = styled(IconButton)`
     color: #000;
   }
 `;
+
