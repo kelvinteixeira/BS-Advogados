@@ -14,34 +14,9 @@ import {
 } from "react-icons/ai";
 
 export function Lawyers() {
-  function socialMediaLink(value: string) {
-    switch (value) {
-      case "instagram":
-        window.open("https://www.instagram.com/bsadvogadoss/", "_blank");
-        break;
-      case "facebook":
-        window.open("https://www.instagram.com/bsadvogadoss/", "_blank");
-        break;
-      case "linkedin":
-        window.open("https://www.instagram.com/bsadvogadoss/", "_blank");
-        break;
-      case "whatsapp":
-        window.open(
-          "https://api.whatsapp.com/send?phone=5583998453749",
-          "_blank"
-        );
-        break;
-      case "email":
-        window.open("barbosadesousadvogados@gmail.com", "_blank");
-        break;
-      default:
-        window.alert("Rede social não existente");
-    }
-  }
-
   return (
     <Styled.Container>
-      <Typography variant="h4" align="center" marginBottom={3}>
+      <Typography variant="h3" align="center" marginBottom={3}>
         Quem somos
       </Typography>
 
@@ -62,37 +37,36 @@ export function Lawyers() {
 
           <Grid item>
             <IconButton
-              onClick={() => socialMediaLink("instagram")}
+              href="https://www.instagram.com/joaovitor.bs.adv/"
+              target="_blank"
               aria-label="instagram"
             >
               <AiOutlineInstagram color="#000" />
             </IconButton>
             <IconButton
-              onClick={() => socialMediaLink("linkedin")}
+              href="https://www.linkedin.com/in/jo%C3%A3o-v%C3%ADtor-barbosa-de-sousa-24ab63226/"
+              target="_blank"
               aria-label="linkedin"
             >
               <AiOutlineLinkedin color="#000" />
             </IconButton>
             <IconButton
-              onClick={() => socialMediaLink("facebook")}
+              href="https://www.facebook.com/joaovitor.barbosadesousa"
+              target="_blank"
               aria-label="facebook"
             >
               <AiOutlineFacebook color="#000" />
             </IconButton>
             <IconButton
-              onClick={() => socialMediaLink("email")}
+              onClick={() => window.open("mailto:joao_vitor_72@hotmail.com")}
               aria-label="email"
             >
               <AiOutlineMail color="#000" />
             </IconButton>
+
             <IconButton
-              onClick={() => socialMediaLink("whatsapp")}
-              aria-label="whatsapp"
-            >
-              <AiOutlineTwitter color="#000" />
-            </IconButton>
-            <IconButton
-              onClick={() => socialMediaLink("whatsapp")}
+              href="https://api.whatsapp.com/send?phone=5583996373738"
+              target="_blank"
               aria-label="whatsapp"
             >
               <AiOutlineWhatsApp color="#000" />
@@ -113,37 +87,35 @@ export function Lawyers() {
           </Typography>
           <Grid item>
             <IconButton
-              onClick={() => socialMediaLink("instagram")}
+              href="https://www.instagram.com/amandab.adv/"
+              target="_blank"
               aria-label="instagram"
             >
               <AiOutlineInstagram color="#000" />
             </IconButton>
             <IconButton
-              onClick={() => socialMediaLink("linkedin")}
+              href="https://www.linkedin.com/in/amanda-barbosa-117780190/"
+              target="_blank"
               aria-label="linkedin"
             >
               <AiOutlineLinkedin color="#000" />
             </IconButton>
             <IconButton
-              onClick={() => socialMediaLink("facebook")}
+              href="https://www.facebook.com/amanda.barbosa.20"
+              target="_blank"
               aria-label="facebook"
             >
               <AiOutlineFacebook color="#000" />
             </IconButton>
             <IconButton
-              onClick={() => socialMediaLink("email")}
+              onClick={() => window.open("mailto:amanda.bs.132@gmail.com")}
               aria-label="email"
             >
               <AiOutlineMail color="#000" />
             </IconButton>
             <IconButton
-              onClick={() => socialMediaLink("whatsapp")}
-              aria-label="whatsapp"
-            >
-              <AiOutlineTwitter color="#000" />
-            </IconButton>
-            <IconButton
-              onClick={() => socialMediaLink("whatsapp")}
+              href="https://api.whatsapp.com/send?phone=5583987336830"
+              target="_blank"
               aria-label="whatsapp"
             >
               <AiOutlineWhatsApp color="#000" />
