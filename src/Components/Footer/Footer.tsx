@@ -10,34 +10,10 @@ import {
   AiOutlinePhone,
   AiOutlineTwitter,
 } from "react-icons/ai";
-import { Grid, IconButton, Typography } from "@mui/material";
+import { Grid, IconButton, Tooltip, Typography } from "@mui/material";
 import Logo from "../../Assets/logo.svg";
 
 export function Footer() {
-  function socialMediaLink(value: string) {
-    switch (value) {
-      case "instagram":
-        window.open("https://www.instagram.com/bsadvogadoss/", "_blank");
-        break;
-      case "facebook":
-        window.open("https://www.instagram.com/bsadvogadoss/", "_blank");
-        break;
-      case "linkedin":
-        window.open("https://www.instagram.com/bsadvogadoss/", "_blank");
-        break;
-      case "email":
-        window.open("barbosadesousadvogados@gmail.com", "_blank");
-        break;
-      case "whatsapp":
-        window.open(
-          "https://api.whatsapp.com/send?phone=5583998453749",
-          "_blank"
-        );
-        break;
-      default:
-        window.alert("Rede social não existente");
-    }
-  }
   return (
     <Styled.Footer>
       <Styled.FooterContent>
@@ -76,37 +52,41 @@ export function Footer() {
 
           <Grid item>
             <IconButton
-              onClick={() => socialMediaLink("instagram")}
+              href="https://www.instagram.com/bsadvogadoss/"
+              target="_blank"
               aria-label="instagram"
             >
               <AiOutlineInstagram color="#000" />
             </IconButton>
+            <Tooltip title="Em desenvolvimento">
+              <IconButton aria-label="linkedin">
+                <AiOutlineLinkedin color="#000" />
+              </IconButton>
+            </Tooltip>
+
+            <Tooltip title="Em desenvolvimento">
+              <IconButton aria-label="facebook">
+                <AiOutlineFacebook color="#000" />
+              </IconButton>
+            </Tooltip>
+
+            <Tooltip title="Em desenvolvimento">
+              <IconButton aria-label="twitter">
+                <AiOutlineTwitter color="#000" />
+              </IconButton>
+            </Tooltip>
             <IconButton
-              onClick={() => socialMediaLink("linkedin")}
-              aria-label="linkedin"
-            >
-              <AiOutlineLinkedin color="#000" />
-            </IconButton>
-            <IconButton
-              onClick={() => socialMediaLink("facebook")}
-              aria-label="facebook"
-            >
-              <AiOutlineFacebook color="#000" />
-            </IconButton>
-            <IconButton
-              onClick={() => socialMediaLink("email")}
+              onClick={() =>
+                window.open("mailto:barbosadesousadvogados@gmail.com")
+              }
               aria-label="email"
             >
               <AiOutlineMail color="#000" />
             </IconButton>
+
             <IconButton
-              onClick={() => socialMediaLink("whatsapp")}
-              aria-label="whatsapp"
-            >
-              <AiOutlineTwitter color="#000" />
-            </IconButton>
-            <IconButton
-              onClick={() => socialMediaLink("whatsapp")}
+              href="https://api.whatsapp.com/send?phone=5583998453749"
+              target="_blank"
               aria-label="whatsapp"
             >
               <AiOutlineWhatsApp color="#000" />
