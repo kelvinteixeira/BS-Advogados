@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Alert, Grid, IconButton, Snackbar, Tooltip } from "@mui/material";
-import ErrorOutlineIcon from "@mui/icons-material/ErrorOutline";
 import { animateScroll as scroll } from "react-scroll";
 import WhatappImage from "../../Assets/WhatsApp.svg.webp";
 import {

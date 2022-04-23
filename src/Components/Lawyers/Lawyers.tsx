@@ -10,7 +10,6 @@ import {
   AiOutlineFacebook,
   AiOutlineMail,
   AiOutlineWhatsApp,
-  AiOutlineTwitter,
 } from "react-icons/ai";
 
 export function Lawyers() {

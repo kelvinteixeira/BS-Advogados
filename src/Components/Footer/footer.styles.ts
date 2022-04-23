@@ -1,4 +1,3 @@
-import { Container } from './../Header/Header.styles';
 import styled from "@emotion/styled";
 import { Box, IconButton } from "@mui/material";
 
