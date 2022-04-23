@@ -21,11 +21,11 @@ export function Header() {
   return (
     <Styled.Container>
       <Grid container alignItems="center" justifyContent="space-evenly">
-        <Grid item xs={2}>
+        <Grid item>
           <Styled.LogoImg className="responsive-logo" src={Logo} />
         </Grid>
 
-        <Grid item xs={4}>
+        <Grid id="header-links" item xs={4}>
           <Grid container justifyContent="space-around">
             <Styled.StyledButton
               variant="outlined"
@@ -67,23 +67,23 @@ export function Header() {
             target="_blank"
             aria-label="instagram"
           >
-            <AiOutlineInstagram color="#000" />
+            <AiOutlineInstagram id="header-icons" color="#000" />
           </IconButton>
           <Tooltip title="Em desenvolvimento">
             <IconButton aria-label="linkedin">
-              <AiOutlineLinkedin color="#000" />
+              <AiOutlineLinkedin id="header-icons" color="#000" />
             </IconButton>
           </Tooltip>
 
           <Tooltip title="Em desenvolvimento">
             <IconButton aria-label="facebook">
-              <AiOutlineFacebook color="#000" />
+              <AiOutlineFacebook id="header-icons" color="#000" />
             </IconButton>
           </Tooltip>
 
           <Tooltip title="Em desenvolvimento">
             <IconButton aria-label="twitter">
-              <AiOutlineTwitter color="#000" />
+              <AiOutlineTwitter id="header-icons" color="#000" />
             </IconButton>
           </Tooltip>
           <IconButton
@@ -92,7 +92,15 @@ export function Header() {
             }
             aria-label="email"
           >
-            <AiOutlineMail color="#000" />
+            <AiOutlineMail id="header-icons" color="#000" />
+          </IconButton>
+          <IconButton
+            id="header-whatsapp-icon"
+            href="https://api.whatsapp.com/send?phone=5583998453749"
+            target="_blank"
+            aria-label="whatsapp"
+          >
+            <AiOutlineWhatsApp id="header-icons" color="#000" />
           </IconButton>
         </Grid>
       </Grid>

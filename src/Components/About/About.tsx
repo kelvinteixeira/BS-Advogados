@@ -68,7 +68,7 @@ export function About() {
               align="center"
               marginBottom={1}
             >
-              Direito Previdenciário Atua no direito público, voltada às
+              Direito Previdenciário atua no direito público, voltada às
               questões relacionadas à previdência social e, de certa forma, à
               seguridade social: direitos relativos à saúde, à previdência e à
               assistência social.
@@ -94,8 +94,8 @@ export function About() {
             >
               Direito do Trabalho é Responsável por regular a relação entre
               trabalhadores e empregadores, baseado nos princípios e leis
-              trabalhistas. Importante para garantir o sustento, proteção e
-              segurança.
+              trabalhistas. Garante o sustento, proteção e
+              segurança entre ambas.
             </Typography>
             <Divider />
           </Box>

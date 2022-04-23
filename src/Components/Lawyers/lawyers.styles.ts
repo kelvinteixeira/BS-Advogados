@@ -17,7 +17,7 @@ export const Container = styled(Box)`
   @media (max-width: 450px) {
 
     h5 {
-      font-size: 2rem;
+      font-size: 1rem;
     }
     
     h3 {

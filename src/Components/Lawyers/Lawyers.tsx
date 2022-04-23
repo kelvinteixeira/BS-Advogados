@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Avatar, Grid, IconButton, Typography } from "@mui/material";
+import { Grid, IconButton, Typography } from "@mui/material";
 import * as Styled from "./lawyers.styles";
 import JoaoImage from "../../Assets/joao.jpg";
 import AmandaImage from "../../Assets/amanda.jpg";

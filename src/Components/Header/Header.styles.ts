@@ -19,10 +19,6 @@ export const StyledButton = styled(Button)`
 
 export const LogoImg = styled.img`
   width: 6rem;
-  border: 0;
-  margin: 0;
-  margin-left: 4rem;
-  padding: 0;
 `;
 
 export const StyledIconButton = styled(IconButton)`
