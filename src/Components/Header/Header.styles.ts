@@ -40,11 +40,11 @@ export const StyledIconButton = styled(IconButton)`
 
 export const WhatsappButton = styled(Button)`
   position: fixed;
-  top: 0;
-  right: 0;
-  margin: .5rem;
+  top: 10;
+  left: 0;
+  margin: .3rem;
 `;
 
 export const WhatsAppImage = styled.img`
-  width: 60px;
+  width: 150px;
 `;

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Alert, Grid, IconButton, Snackbar, Tooltip } from "@mui/material";
 import { animateScroll as scroll } from "react-scroll";
-import WhatappImage from "../../Assets/WhatsApp.svg.webp";
+import WhatappImage from "../../Assets/whatsappFaleConosco.png";
 import {
   AiOutlineLinkedin,
   AiOutlineInstagram,
@@ -116,6 +116,7 @@ export function Header() {
 
       <Tooltip title="Fale conosco">
         <Styled.WhatsappButton
+          className="whatsapp-button-animation"
           id="whatsapp-button"
           onClick={() =>
             window.open(
