@@ -10,18 +10,17 @@ export const Container = styled.main`
    h3{
     font-size: 2.5rem;
    } 
-  }
-  @media (max-width: 430px) {
+  } 
+   @media (max-width: 430px) { 
    h3{
     font-size: 2.2rem;
-   } 
-  }
+   }  
+   }
 `;
 
 export const BoxContent = styled(Box)`
   padding: 2rem;
-  
-  
+  text-align: center;
 `;
 
 export const StyledIconButton = styled(IconButton)`

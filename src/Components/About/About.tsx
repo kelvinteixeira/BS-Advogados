@@ -13,7 +13,7 @@ export function About() {
         BS Advogados
       </Typography>
       <Styled.BoxContent>
-        <Typography className="message" fontSize={12} align="center">
+        <Typography id="about-text" variant="overline" fontSize={20}>
           O escritório BS Advogados é qualificado com experiência em diversas
           áreas do Direito. Buscamos garantir o melhor resultado, com agilidade
           e atendimento de excelência aos nossos clientes.
@@ -94,8 +94,8 @@ export function About() {
             >
               Direito do Trabalho é Responsável por regular a relação entre
               trabalhadores e empregadores, baseado nos princípios e leis
-              trabalhistas. Garante o sustento, proteção e
-              segurança entre ambas.
+              trabalhistas. Garante o sustento, proteção e segurança entre
+              ambas.
             </Typography>
             <Divider />
           </Box>

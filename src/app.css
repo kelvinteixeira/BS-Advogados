@@ -7,30 +7,29 @@
   font-family: 'Poppins', sans-serif !important;
 }
 
+.whatsapp-button-animation {
+  animation: floatButton 3s ease-in-out infinite;
+}
 
-@media (min-width: 1180px) {
-  .message {
-    max-width: 73.5rem;
-    animation: typing 10s steps(185), blink .8s infinite alternate;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 2px solid;
+@keyframes floatButton {
+  0% {
+    transform: translateY(0);
   }
 
-  @keyframes typing {
-    from {
-      width: 0;
-    }
+  50% {
+    transform: translateY(-15px);
   }
 
-  @keyframes blink {
-    40% {
-      border-color: rgba(255, 255, 255, 0.2);
-    }
+  100% {
+    transform: translateY(0);
   }
 }
 
 @media (max-width: 768px) {
+
+  #about-text {
+    font-size: 1.1rem;
+  }
 
   #card-container {
     display: flex;
@@ -83,6 +82,10 @@
 
 @media (max-width: 600px) {
 
+  #about-text {
+    font-size: .9rem;
+  }
+
   #card img {
     width: 100px;
     height: auto;
@@ -106,6 +109,15 @@
 }
 
 @media (max-width: 430px) {
+
+  #whatsapp-button {
+    display: none;
+  }
+
+  #about-text {
+    font-size: .8rem;
+  }
+
   #card img {
     display: none;
   }
@@ -127,9 +139,7 @@
 }
 
 @media (max-width: 900px) {
-  #whatsapp-button {
-    display: none;
-  }
+
 
   #scrollTop-button {
     display: none;
