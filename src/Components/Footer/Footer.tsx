@@ -10,7 +10,7 @@ import {
   AiOutlinePhone,
   AiOutlineTwitter,
 } from "react-icons/ai";
-import { Grid, IconButton, Tooltip, Typography } from "@mui/material";
+import { Box, Grid, IconButton, Tooltip, Typography } from "@mui/material";
 import Logo from "../../Assets/logo.svg";
 
 export function Footer() {
@@ -22,32 +22,35 @@ export function Footer() {
             <Styled.LogoImg src={Logo} />
           </Grid>
 
-          <Grid item xs={2}>
-            <Typography variant="h6">
-              Endereço <AiOutlineEnvironment />{" "}
-            </Typography>
-            <Typography variant="body2">
-              Rua João Machado, 267, Sala 12, Prata - Campina Grande /PB CEP
-              26758400
-            </Typography>
+          <Grid item>
+            <Box>
+              <Typography variant="h6">
+                Endereço <AiOutlineEnvironment />{" "}
+              </Typography>
+              <Typography variant="body2">
+                Rua João Machado, 267, Sala 12,
+              </Typography>
+              <Typography variant="body2">
+                Prata, Campina Grande-PB CEP 26758-400
+              </Typography>
+            </Box>
           </Grid>
 
           <Grid item>
-            <Typography variant="h6">
-              Fale Conosco <AiOutlinePhone />
-            </Typography>
-            <Typography variant="body2">
-              (83) 9 9637-3738 - <strong>Dr. João</strong>
-            </Typography>
-            <Typography variant="body2">
-              (83) 9 8733-6830 - <strong>Dra. Amanda</strong>
-            </Typography>
-
-            <Grid item xs={2}>
+            <Box>
+              <Typography variant="h6">
+                Fale Conosco <AiOutlinePhone />
+              </Typography>
+              <Typography variant="body2">
+                (83) 9 9637-3738 - <strong>Dr. João</strong>
+              </Typography>
+              <Typography variant="body2">
+                (83) 9 8733-6830 - <strong>Dra. Amanda</strong>
+              </Typography>
               <Typography variant="body2">
                 barbosadesousadvogados@gmail.com
               </Typography>
-            </Grid>
+            </Box>
           </Grid>
 
           <Grid item>

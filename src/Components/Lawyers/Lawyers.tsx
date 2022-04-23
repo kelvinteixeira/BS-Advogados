@@ -21,7 +21,7 @@ export function Lawyers() {
       </Typography>
 
       <Grid container justifyContent="space-evenly">
-        <Grid item textAlign="center">
+        <Grid item textAlign="center" marginBottom={2}>
           <Typography variant="h5" marginBottom={2}>
             Dr. João Vitor Barbosa de Sousa
           </Typography>

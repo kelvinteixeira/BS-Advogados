@@ -3,7 +3,7 @@ import React from "react";
 import DireitoPrevidenciario from "../../Assets/DireitoPrevidenciario.png";
 import DireitoDoTrabalho from "../../Assets/DireitoDoTrabalho.png";
 import DireitoCivil from "../../Assets/DireitoCivil.png";
-import { Divider, Grid, Typography } from "@mui/material";
+import { Box, Divider, Grid, Typography } from "@mui/material";
 import * as Styled from "./about.styles";
 
 export function About() {
@@ -24,45 +24,81 @@ export function About() {
         Nossa especialização
       </Typography>
 
-      <Grid container alignItems="center" justifyContent="space-evenly" >
-        <Grid item xs={3} textAlign="center">
-          <Typography variant="h6">Direito Civil</Typography>
-
-          <img src={DireitoCivil} alt="" />
-
-          <Typography variant="body2" marginBottom={1}>
-            O Direito Civil pode ser entendido como o “direito do cidadão”. Lida
-            com problemas de vida e morte da pessoa, dos deveres e direitos nos
-            contratos, relação com propriedade, casamento entre outras.
-          </Typography>
-          <Divider />
+      <Grid
+        id="content-container"
+        container
+        alignItems="center"
+        justifyContent="space-evenly"
+      >
+        <Grid id="card-container" item xs={3} textAlign="center">
+          <Box id="card">
+            <Box id="card-wrapper">
+              <Typography variant="h6">Direito Civil</Typography>
+              <img src={DireitoCivil} alt="" />
+            </Box>
+          </Box>
+          <Box>
+            <Typography
+              id="card-text"
+              variant="body2"
+              align="center"
+              marginBottom={1}
+            >
+              O Direito Civil pode ser entendido como o “direito do cidadão”.
+              Lida com problemas de vida e morte da pessoa, dos deveres e
+              direitos nos contratos, relação com propriedade, casamento entre
+              outras.
+            </Typography>
+            <Divider />
+          </Box>
         </Grid>
 
-        <Grid item xs={3} textAlign="center">
-          <Typography variant="h6">Direito Previdenciário</Typography>
+        <Grid id="card-container" item xs={3} textAlign="center">
+          <Box id="card">
+            <Box id="card-wrapper">
+              <Typography variant="h6">Direito Previdenciário</Typography>
+              <img src={DireitoPrevidenciario} alt="" />
+            </Box>
+          </Box>
 
-          <img src={DireitoPrevidenciario} alt="" />
-
-          <Typography variant="body2" align="center" marginBottom={1}>
-            Direito Previdenciário Atua no direito público, voltada às questões
-            relacionadas à previdência social e, de certa forma, à seguridade
-            social: direitos relativos à saúde, à previdência e à assistência
-            social.
-          </Typography>
-          <Divider />
+          <Box>
+            <Typography
+              id="card-text"
+              variant="body2"
+              align="center"
+              marginBottom={1}
+            >
+              Direito Previdenciário Atua no direito público, voltada às
+              questões relacionadas à previdência social e, de certa forma, à
+              seguridade social: direitos relativos à saúde, à previdência e à
+              assistência social.
+            </Typography>
+            <Divider />
+          </Box>
         </Grid>
-        <Grid item xs={3} textAlign='center'>
-          <Typography variant="h6"> Direito do Trabalho</Typography>
 
-          <img src={DireitoDoTrabalho} alt="" />
+        <Grid id="card-container" item xs={3} textAlign="center">
+          <Box id="card">
+            <Box id="card-wrapper">
+              <Typography variant="h6"> Direito do Trabalho</Typography>
+              <img src={DireitoDoTrabalho} alt="" />
+            </Box>
+          </Box>
 
-          <Typography variant="body2" align="center" marginBottom={1}>
-            Direito do Trabalho é Responsável por regular a relação entre
-            trabalhadores e empregadores, baseado nos princípios e leis
-            trabalhistas. Importante para garantir o sustento, proteção e
-            segurança.
-          </Typography>
-          <Divider />
+          <Box>
+            <Typography
+              id="card-text"
+              variant="body2"
+              align="center"
+              marginBottom={1}
+            >
+              Direito do Trabalho é Responsável por regular a relação entre
+              trabalhadores e empregadores, baseado nos princípios e leis
+              trabalhistas. Importante para garantir o sustento, proteção e
+              segurança.
+            </Typography>
+            <Divider />
+          </Box>
         </Grid>
       </Grid>
     </Styled.Container>

@@ -7,28 +7,127 @@
   font-family: 'Poppins', sans-serif !important;
 }
 
-.message {
-  width: 73.5rem;
-  animation: typing 10s steps(185), blink .8s infinite alternate;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 2px solid;
-}
 
-@keyframes typing {
-  from {
-    width: 0;
-  }
-}
-
-@keyframes blink {
-  40% {
-    border-color: rgba(255, 255, 255, 0.2);
-  }
-}
-
-@media (max-width: 640px) {
+@media (min-width: 1180px) {
   .message {
-    max-width: 30rem;
+    max-width: 73.5rem;
+    animation: typing 10s steps(185), blink .8s infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+  }
+
+  @keyframes blink {
+    40% {
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  #card-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 90%;
+    margin-bottom: 1rem;
+  }
+
+  #card {
+    display: inherit;
+    line-height: 1px;
+  }
+
+  #card h6 {
+    font-size: 1rem;
+  }
+
+  #card-wrapper {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  #card-wrapper::before {
+    content: '';
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    display: block;
+    border: 1px solid #fff;
+    opacity: 0;
+    transition: .5s ease-in-out;
+  }
+
+  #content-container {
+    flex-direction: column;
+  }
+
+  #card-text {
+    width: 25rem;
+    font-size: 1rem;
+    margin-top: 3rem;
+  }
+}
+
+@media (max-width: 600px) {
+
+  #card img {
+    width: 100px;
+    height: auto;
+  }
+
+  #card h6 {
+    font-size: .8rem;
+  }
+
+  #card-text {
+    width: 18rem;
+    font-size: .8rem;
+    margin-top: 3rem;
+  }
+
+}
+
+@media (max-width: 430px) {
+  #card img {
+    display: none;
+  }
+
+  #card-container {
+    display: grid;
+  }
+
+  #card h6 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  #card-text {
+    width: 18rem;
+    margin-top: 0;
+    font-size: .9rem;
+  }
+}
+
+@media (max-width: 800px) {
+  #whatsapp-button {
+    display: none;
+  }
+
+  #scrollTop-button {
+    display: none;
   }
 }

@@ -22,7 +22,7 @@ export function Header() {
     <Styled.Container>
       <Grid container alignItems="center" justifyContent="space-evenly">
         <Grid item xs={2}>
-          <Styled.LogoImg src={Logo} />
+          <Styled.LogoImg className="responsive-logo" src={Logo} />
         </Grid>
 
         <Grid item xs={4}>
@@ -98,6 +98,7 @@ export function Header() {
       </Grid>
       <Tooltip title="Para o topo">
         <Styled.StyledIconButton
+          id="scrollTop-button"
           color="inherit"
           onClick={() => scroll.scrollTo(0)}
           size="large"
@@ -108,6 +109,7 @@ export function Header() {
 
       <Tooltip title="Fale conosco">
         <Styled.WhatsappButton
+          id="whatsapp-button"
           onClick={() =>
             window.open(
               "https://api.whatsapp.com/send?phone=5583998453749",

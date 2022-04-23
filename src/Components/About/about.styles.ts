@@ -1,17 +1,27 @@
 import styled from "@emotion/styled";
-import { Box, Button, IconButton, Typography } from "@mui/material";
+import { Box, IconButton } from "@mui/material";
 
-export const Container = styled(Box)`
+export const Container = styled.main`
   display: grid;
   place-items: center;
   margin-top: 3rem;
+
+  @media (max-width: 530px) {
+   h3{
+    font-size: 2.5rem;
+   } 
+  }
+  @media (max-width: 430px) {
+   h3{
+    font-size: 2.2rem;
+   } 
+  }
 `;
 
 export const BoxContent = styled(Box)`
-  margin-left: 30px;
-  margin: 0 auto;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+  padding: 2rem;
+  
+  
 `;
 
 export const StyledIconButton = styled(IconButton)`
