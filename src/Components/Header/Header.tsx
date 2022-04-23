@@ -37,7 +37,7 @@ export function Header() {
             <Styled.StyledButton
               variant="outlined"
               color="inherit"
-              onClick={() => scroll.scrollTo(650)}
+              onClick={() => scroll.scrollTo(790)}
             >
               Quem somos
             </Styled.StyledButton>
@@ -45,7 +45,7 @@ export function Header() {
             <Styled.StyledButton
               variant="outlined"
               color="inherit"
-              onClick={() => scroll.scrollTo(1250)}
+              onClick={() => scroll.scrollTo(1370)}
             >
               Contato
             </Styled.StyledButton>
