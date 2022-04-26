@@ -27,23 +27,20 @@ export function Contact() {
     message: "",
   };
 
+  const serviceId = String(import.meta.env.VITE_SERVICE_EMAIL_ID);
+  const templateId = String(import.meta.env.VITE_TEMPLATE_ID);
+  const serviceToken = String(import.meta.env.VITE_TOKEN);
+
   function handleSendEmail(values: FormValues, action: FormActions) {
-    emailjs
-      .sendForm(
-        String(import.meta.env.VITE_SERVICE_EMAIL_ID),
-        String(import.meta.env.VITE_TEMPLATE_ID),
-        form.current,
-        String(import.meta.env.VITE_TOKEN)
-      )
-      .then(
-        (result) => {
-          setShowSnackBarSuccess(true);
-        },
-        (error) => {
-          setShowSnackBarError(true);
-          console.log(error.message);
-        }
-      );
+    emailjs.sendForm(serviceId, templateId, form.current, serviceToken).then(
+      (result) => {
+        setShowSnackBarSuccess(true);
+      },
+      (error) => {
+        setShowSnackBarError(true);
+        console.log(error.message);
+      }
+    );
     action.setSubmitting(false);
     action.resetForm();
   }
