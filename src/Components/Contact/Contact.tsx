@@ -27,12 +27,12 @@ export function Contact() {
     message: "",
   };
 
-  const serviceId = String(import.meta.env.VITE_SERVICE_EMAIL_ID);
-  const templateId = String(import.meta.env.VITE_TEMPLATE_ID);
-  const serviceToken = String(import.meta.env.VITE_TOKEN);
+  const service_id = String(import.meta.env.VITE_SERVICE_EMAIL_ID);
+  const template_Id = String(import.meta.env.VITE_TEMPLATE_ID);
+  const user_id = String(import.meta.env.VITE_TOKEN);
 
   function handleSendEmail(values: FormValues, action: FormActions) {
-    emailjs.sendForm(serviceId, templateId, form.current, serviceToken).then(
+    emailjs.sendForm(service_id, template_Id, form.current, user_id).then(
       (result) => {
         setShowSnackBarSuccess(true);
       },
