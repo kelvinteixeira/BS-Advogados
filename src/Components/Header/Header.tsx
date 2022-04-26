@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Alert, Grid, IconButton, Snackbar, Tooltip } from "@mui/material";
 import { animateScroll as scroll } from "react-scroll";
 import WhatappImage from "../../Assets/whatsappFaleConosco.png";
+import WhatappIcone from "../../Assets/WhatsApp.svg.webp";
 import {
   AiOutlineLinkedin,
   AiOutlineInstagram,
@@ -128,6 +129,19 @@ export function Header() {
           <Styled.WhatsAppImage src={WhatappImage} alt="whatsapp logo" />
         </Styled.WhatsappButton>
       </Tooltip>
+
+      <Styled.WhatsappIconButton
+        className="whatsapp-button-animation"
+        id="whatsapp-icone"
+        onClick={() =>
+          window.open(
+            "https://api.whatsapp.com/send?phone=5583998453749",
+            "_blank"
+          )
+        }
+      >
+        <Styled.WhatsAppIcon src={WhatappIcone} alt="whatsapp logo" />
+      </Styled.WhatsappIconButton>
 
       <Snackbar
         open={showSnackBar}

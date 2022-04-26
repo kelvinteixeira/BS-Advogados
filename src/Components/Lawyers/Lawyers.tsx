@@ -26,11 +26,14 @@ export function Lawyers() {
           </Typography>
           <Styled.StyledAvatar alt="Joao" src={JoaoImage} />
 
-          <Typography variant="overline">
-            Frase impactante que gosta de relembrar
+          <Typography variant="subtitle2" align="center" marginTop={2}>
+            <i>
+              "A lei não é uma espada morta que deve ser manejada <br></br>e a
+              justiça não socorre aos que dorme"
+            </i>
           </Typography>
 
-          <Typography variant="body1" marginBottom={2}>
+          <Typography variant="body1" marginBottom={1} marginTop={1}>
             OAB/PB 24016
           </Typography>
 
@@ -78,10 +81,13 @@ export function Lawyers() {
             Dra. Amanda Barbosa de Sousa
           </Typography>
           <Styled.StyledAvatar alt="Amanda" src={AmandaImage} />
-          <Typography variant="overline">
-            Frase impactante que gosta de relembrar
+          <Typography variant="subtitle2" align="center" marginTop={2}>
+            <i>
+              "A injustiça num lugar qualquer <br></br>é uma ameaça à justiça em
+              todo lugar"
+            </i>
           </Typography>
-          <Typography variant="body1" marginBottom={2}>
+          <Typography variant="body1" marginBottom={1} marginTop={1}>
             OAB/PB 24033
           </Typography>
           <Grid item>

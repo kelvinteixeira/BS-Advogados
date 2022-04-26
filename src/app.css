@@ -183,4 +183,8 @@
     height: 1.3rem;
     transition: .5s ease-in-out;
   }
+
+  #whatsapp-icone {
+    display: block;
+  }
 }

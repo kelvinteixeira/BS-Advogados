@@ -25,7 +25,7 @@ export const StyledForm = styled(Box)`
       font-size: 2rem;
     }
     
-    width: 29rem
+    width: 29rem;
     
   }
   
@@ -34,7 +34,7 @@ export const StyledForm = styled(Box)`
      h3 {
       font-size: 1.6rem;
     }
-    width: 25rem
+    width: 25rem;
   }
 
   @media (max-width: 450px) {
@@ -42,14 +42,15 @@ export const StyledForm = styled(Box)`
      h3 {
       font-size: 1.1rem;
     }
-    width: 20rem
+    width: 20rem;
+ 
   }
   @media (max-width: 380px) {
 
      h3 {
       font-size: 1.1rem;
     }
-    width: 18rem
+    width: 18rem;
   }
   
 `;

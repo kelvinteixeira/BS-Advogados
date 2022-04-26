@@ -45,6 +45,17 @@ export const WhatsappButton = styled(Button)`
   margin: .3rem;
 `;
 
+export const WhatsappIconButton = styled(Button)`
+  position: fixed;
+  bottom: 1;
+  left: 0;
+  display: none;
+`;
+
 export const WhatsAppImage = styled.img`
-  width: 150px;
+  width: 130px;
+`;
+
+export const WhatsAppIcon = styled.img`
+  width: 45px;
 `;
