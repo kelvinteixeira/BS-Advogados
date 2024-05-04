@@ -81,7 +81,7 @@ export function Contact() {
         <form ref={form} onSubmit={handleSubmit}>
           <Box
             sx={{
-              height: isMobile ? "95vh" : isTablet ? "55vh" : "auto",
+              height: isMobile ? "auto" : isTablet ? "55vh" : "auto",
               padding: 5,
               background: "linear-gradient(to bottom, #757f9a, #faf8f8)",
             }}
