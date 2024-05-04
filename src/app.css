@@ -1,190 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@font-face {
+  font-family: "Voga";
+  src: url("/fonts/Vollkorn.ttf") format("truetype");
+}
 
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif !important;
+  font-family: "Voga", serif !important;
 }
 
-.whatsapp-button-animation {
-  animation: floatButton 3s ease-in-out infinite;
+.normal-header {
+  background: linear-gradient(to bottom, #00000099, #78986610);
+  z-index: 1;
 }
 
-@keyframes floatButton {
-  0% {
-    transform: translateY(0);
-  }
 
-  50% {
-    transform: translateY(-15px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
+.dark-header {
+  background: linear-gradient(to right, #050505, #d7dde8b6, #050505);
+  z-index: 1;
 }
 
-@media (max-width: 768px) {
-
-  #about-text {
-    font-size: 1.1rem;
-  }
-
-  #card-container {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 90%;
-    margin-bottom: 1rem;
-  }
-
-  #card {
-    display: inherit;
-    line-height: 1px;
-  }
-
-  #card h6 {
-    font-size: 1rem;
-  }
-
-  #card-wrapper {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-  }
-
-  #card-wrapper::before {
-    content: '';
-    position: absolute;
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    display: block;
-    border: 1px solid #fff;
-    opacity: 0;
-    transition: .5s ease-in-out;
-  }
-
-  #content-container {
-    flex-direction: column;
-  }
-
-  #card-text {
-    width: 25rem;
-    font-size: 1rem;
-    margin-top: 3rem;
-  }
-}
-
-@media (max-width: 600px) {
-
-  #about-text {
-    font-size: .9rem;
-  }
-
-  #card img {
-    width: 100px;
-    height: auto;
-  }
-
-  #card h6 {
-    font-size: .8rem;
-  }
-
-  #card-text {
-    width: 18rem;
-    font-size: .8rem;
-    margin-top: 3rem;
-  }
-
-  #header-icons {
-    width: 1rem;
-    height: 1rem;
-    transition: .5s ease-in-out;
-  }
-}
-
-@media (max-width: 430px) {
-
-  #whatsapp-button {
-    display: none;
-  }
-
-  #about-text {
-    font-size: .8rem;
-  }
-
-  #card img {
-    display: none;
-  }
-
-  #card-container {
-    display: grid;
-  }
-
-  #card h6 {
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
-  }
-
-  #card-text {
-    width: 18rem;
-    margin-top: 0;
-    font-size: .9rem;
-  }
-}
-
-@media (max-width: 900px) {
-
-
-  #scrollTop-button {
-    display: none;
-  }
-
-}
-
-@media (max-width: 1170px) {
-  #header-links {
-    display: none;
-    transition: .5s ease-in-out;
-  }
-
-  #header-icons {
-    width: 3rem;
-    height: 3rem;
-    transition: .5s ease-in-out;
-  }
-
-}
-
-@media (min-width: 900px) {
-
-  #header-whatsapp-icon {
-    display: none;
-  }
-
-}
-
-@media (max-width: 600px) {
-  #header-icons {
-    width: 2rem;
-    height: 2rem;
-    transition: .5s ease-in-out;
-  }
-}
-
-@media (max-width: 430px) {
-  #header-icons {
-    width: 1.3rem;
-    height: 1.3rem;
-    transition: .5s ease-in-out;
-  }
-
-  #whatsapp-icone {
-    display: block;
-  }
+.text-gradient {
+  background-image: linear-gradient(to top, #757f9a, #d7dde8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }

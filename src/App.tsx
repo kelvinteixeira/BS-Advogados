@@ -1,11 +1,14 @@
-import React from "react";
-import { AppRoutes } from "./routes";
-import './app.css'
+import "./app.css";
+import { Home } from "./Screens/Home";
+import { ThemeProvider } from "@emotion/react";
+import { theme } from "./theme/theme";
 
 function App() {
   return (
-    <AppRoutes />
-  )
+    <ThemeProvider theme={theme}>
+      <Home />
+    </ThemeProvider>
+  );
 }
 
 export default App;
