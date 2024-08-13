@@ -5,16 +5,14 @@ export const FirstSection = () => {
   const isTablet = useMediaQuery("(max-width:820px)");
   return (
     <Grid
-      width={"100%"}
-      height={isMobile ? "15vh" : isTablet ? "40vh" : "100vh"}
+    padding={2}
       sx={{
-        backgroundColor: "#757f9a3f",
+        backgroundColor: "#757f9a48",
       }}
     >
       <img
         style={{
           width: "100%",
-          height: isMobile ? "15vh" : isTablet ? "40vh" : "100vh",
           objectFit: "cover",
           position: "absolute",
           filter: "blur(5px)",
@@ -28,7 +26,6 @@ export const FirstSection = () => {
       />
       <Grid
         container
-        height={isMobile ? "15vh" : isTablet ? "40vh" : "100vh"}
         justifyContent={"center"}
         direction={"column"}
       >

@@ -1,5 +1,4 @@
 import {
-  Box,
   Typography,
   Card,
   CardMedia,
@@ -9,7 +8,6 @@ import {
   CardContent,
 } from "@mui/material";
 import { professionals } from "../services/api";
-import { Instagram, Email, WhatsApp } from "@mui/icons-material";
 import {
   AiOutlineFacebook,
   AiOutlineInstagram,

@@ -23,7 +23,11 @@ export const Footer = () => {
       justifyContent={"center"}
       direction={"column"}
       alignItems={"center"}
-      sx={{ background: "linear-gradient(to top, #000000, #d7dde8)" }}
+      bottom={0}
+      sx={{
+        background: "linear-gradient(to top, #000000, #d7dde8)",
+        position: "relative",
+      }}
     >
       <img style={{ width: 100 }} src="/images/logo.png" />
       <Grid container justifyContent={"center"}>

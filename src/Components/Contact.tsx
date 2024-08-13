@@ -81,7 +81,6 @@ export function Contact() {
         <form ref={form} onSubmit={handleSubmit}>
           <Box
             sx={{
-              height: isMobile ? "auto" : isTablet ? "55vh" : "auto",
               padding: 5,
               background: "linear-gradient(to bottom, #757f9a, #faf8f8)",
             }}
@@ -90,7 +89,6 @@ export function Contact() {
               container
               sx={{
                 backgroundColor: "#00000027",
-                height: isMobile ? "auto" : 460,
                 borderRadius: 8,
                 overflow: "hidden",
               }}
